@@ -3,9 +3,9 @@
     
         "post0": {
             "title": "Markdown",
-            "content": "{ “cells”: [ { “cell_type”: “markdown”, “metadata”: {}, “source”: [ “# First Markdown Page n”, “## This is a sub heading n”, “This is a description n”, “ n”, “- one n”, “ - two n”, “ - three n”, “ - four n”, “ n”, “## Here is a block of code n”, “python n&quot;, &quot;Print( &quot;Hello World &quot;) n&quot;, &quot;” ] } ], “metadata”: { “language_info”: { “name”: “python” }, “orig_nbformat”: 4 }, “nbformat”: 4, “nbformat_minor”: 2 } .",
-            "url": "https://ryanrob327.github.io/csp/2022/08/21/markdown.ipynb",
-            "relUrl": "/2022/08/21/markdown.ipynb",
+            "content": "First Markdown Page . This is a sub heading . This is a description . one two three four | . | . | . | . Here is a block of code . Print(&quot;Hello World&quot;) .",
+            "url": "https://ryanrob327.github.io/csp/2022/08/21/markdown.html",
+            "relUrl": "/2022/08/21/markdown.html",
             "date": " • Aug 21, 2022"
         }
         
