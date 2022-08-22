@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Title",
-            "content": "&gt; &quot;This is my first notebook&quot; - toc:true - badges: true - comments: true - author: Ryan McWeeny - categories: [fastpages, jupyter] python Print(&quot;Hello World&quot;) .",
-            "url": "https://ryanrob327.github.io/csp/2022/08/21/notebook.html",
-            "relUrl": "/2022/08/21/notebook.html",
+            "title": "First notebook",
+            "content": "",
+            "url": "https://ryanrob327.github.io/csp/fastpages/jupyter/2022/08/21/notebook.html",
+            "relUrl": "/fastpages/jupyter/2022/08/21/notebook.html",
             "date": " • Aug 21, 2022"
         }
         
