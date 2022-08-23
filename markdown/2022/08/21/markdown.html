@@ -115,8 +115,22 @@ window.onload = wrap_img;
   </li>
 </ul>
 
-<h2 id="here-is-a-block-of-code">Here is a block of code</h2>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Print</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">)</span>
+<h2 id="here-is-a-guessing-game-that-i-made-with-python">Here is a guessing game that I made with python</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Guess a number between 1 and 100"</span><span class="p">))</span>
+<span class="k">while</span> <span class="n">value</span> <span class="o">!=</span> <span class="n">guess</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">guess</span> <span class="o">&lt;</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"too low"</span><span class="p">)</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Guess a number between 1 and 100"</span><span class="p">))</span>
+    <span class="k">elif</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"too high"</span><span class="p">)</span>
+        <span class="n">guess</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Guess a number between 1 and 100"</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"correct!"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"would you like to play again"</span><span class="p">)</span>
 </code></pre></div></div>
 
   </div><a class="u-url" href="/csp/markdown/2022/08/21/markdown.html" hidden></a>
