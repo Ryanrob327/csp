@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+Hi! My name is Ryan I like coding in Python and I am excited for AP computer science this year.
 
 
 
