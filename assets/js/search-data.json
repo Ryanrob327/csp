@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Bash notebook",
-            "content": "test=“python3” # keyword check=`jupyter kernelspec list | grep $test` # run command n=${#check} # determine length if [[ ${n} &gt; 0 ]]; # testt length then # greater than zero echo “$check” else # less than zero echo “$check” fi .",
+            "content": "test=“python3” # keyword check=`jupyter kernelspec list | grep $test` # run command n=${#check} # determine length if [[ ${n} &gt; 0 ]]; # testt length then # greater than zero echo “$check” else # less than zero echo “$check” fi . “” .",
             "url": "https://ryanrob327.github.io/csp/fastpages/jupyter/bash/2022/08/25/Bash-notebook.html",
             "relUrl": "/fastpages/jupyter/bash/2022/08/25/Bash-notebook.html",
             "date": " • Aug 25, 2022"
