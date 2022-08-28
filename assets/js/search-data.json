@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Python Demonstration",
-            "content": "import random value = random.randint(1, 100) guess = int(input(&quot;Guess a number between 1 and 100&quot;)) while value != guess: if guess &lt; value: print(&quot;too low&quot;) guess = int(input(&quot;Guess a number between 1 and 100&quot;)) elif guess &gt; value: print(&quot;too high&quot;) guess = int(input(&quot;Guess a number between 1 and 100&quot;)) print(&quot;correct!&quot;) . too low too low too high correct! .",
+            "content": "Guessing Game . This is a guessing game that I made with python that picks a random number between 1 and 100. When you give your first guess the program tells you whether it is too low or too high and lets you guess again until you have guessed the number. . import random value = random.randint(1, 100) tries = 0 guess = int(input(&quot;Guess a number between 1 and 100&quot;)) while value != guess: if guess &lt; value: print(guess, &quot; is too low&quot;) guess = int(input(&quot;Guess a number between 1 and 100&quot;)) tries += 1 elif guess &gt; value: print(guess, &quot; is too high&quot;) guess = int(input(&quot;Guess a number between 1 and 100&quot;)) tries += 1 print(guess, &quot; is correct! it took you &quot;, tries, &quot; attempts to guess the number.&quot;) . 50 is too low 75 is too low 88 is too high 82 is too low 85 is too low 86 is correct! it took you 5 attempts to guess the number. .",
             "url": "https://ryanrob327.github.io/csp/fastpages/jupyter/python/2022/08/26/Python-Demonstration.html",
             "relUrl": "/fastpages/jupyter/python/2022/08/26/Python-Demonstration.html",
             "date": " • Aug 26, 2022"
