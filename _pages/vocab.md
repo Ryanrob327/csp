@@ -8,8 +8,10 @@ permalink: /vocab/
 ## Fastpages
   - An open source blogging tool with support for Jupyter notebook, markdown, and docs
 
-## Jupyter notebook
-  - Web application that allows editing and running notebook documents with a web browser
+## File types
+  - .md: used to create web pages
+  - .html: similar to .md files, however, .html is more difficult to use but allows for more effects than .md
+  - .ipynb: jupyter notebook uses python and .md in conjunction
 
 ## VS code
   - Code editor optimized for building and debugging web applications
