@@ -37,3 +37,8 @@ title: Class Notes
 - began writing my own poem
 - to do:
   - finish writing my own poem
+
+# Week 2
+| 1. Marching band | 2. AP cluculus | 3. AP computer science | 4. Concert band(brass) | 5. English |
+|-|-|-|-|-|
+|- Got through 9 new sets|- Took quiz, did alright|- learned data abtstraction, HTML fragments|- Got through second part of movt. 1|- went to library, picked up Persepolis|
