@@ -43,5 +43,4 @@ title: Class Notes
 | | 1. Marching band | 2. AP cluculus | 3. AP computer science | 4. Concert band(brass) | 5. English |
 |-|------------------|----------------|------------------------|------------------------|------------|
 |Completed|Got through 9 new sets|Took quiz, did alright|learned data abtstraction, HTML fragments|Got through second part of movt. 1|Went to library, picked up Persepolis|
-|-|------------------|----------------|------------------------|------------------------|------------|
 |ToDo|Prepare for Poway Days parade|Study for test this week|Performance task drafting, create applab|Practice for auditions this week|TBD|
