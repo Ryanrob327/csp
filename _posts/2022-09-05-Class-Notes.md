@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: A post that I can use to help organize school work
-categories: [markdown]
+categories: [week1]
 title: Class Notes
 ---
 # Week 1
