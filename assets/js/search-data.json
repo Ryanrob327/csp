@@ -37,8 +37,8 @@
         ,"post3": {
             "title": "Python Quiz",
             "content": "question = [&quot;what is the fastest plane in the world&quot;, &quot;what is the hightest flying plane in the world&quot;, &quot;what is the largest plane in the world&quot;, &quot;what is the smallest plane in the world&quot;] answer = [&quot;SR-71&quot;, &quot;X-15&quot;, &quot;An-225&quot;, &quot;BD-5J&quot;] points = 0 print(&quot;Take this quiz about planes.&quot;) for i in range(len(question)): print(question[i]) response = input() print(response) if response == answer[i]: points += 1 print(&quot;Correct, you have &quot;, points, &quot; points!&quot;) else: print(&quot;Incorrect, the answer was; &quot;, answer[i]) print(&quot;You have finished the quiz with &quot;, points, &quot; out of &quot;, len(question), &quot; points!&quot;) . Take this quiz about planes. what is the fastest plane in the world SR-71 Correct, you have 1 points! what is the hightest flying plane in the world X-15 Correct, you have 2 points! what is the largest plane in the world U-2 Incorrect, the answer was; An-225 what is the smallest plane in the world BD-5J Correct, you have 3 points! You have finished the quiz with 3 out of 4 points! .",
-            "url": "https://ryanrob327.github.io/csp/fastpages/jupyter/python/2022/08/28/Python-Quiz.html",
-            "relUrl": "/fastpages/jupyter/python/2022/08/28/Python-Quiz.html",
+            "url": "https://ryanrob327.github.io/csp/python/week1/2022/08/28/Python-Quiz.html",
+            "relUrl": "/python/week1/2022/08/28/Python-Quiz.html",
             "date": " • Aug 28, 2022"
         }
         
