@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "App Lab",
-            "content": "Design . Purpose . To create a quiz and a plan that demonstrates our understanding of the content we have learned this week Functionality . | Have three questions | Each question is a different type Button question (one answer) | Input question | check box question (multiple answers) | . | Topic will be about AP comp sci Description . Input . | The quiz will ask a question and the user will input an answer to the question Output . | The quiz will score you after each question and change the screen if you got the question correct | . Success . Button question . Discovery .",
+            "content": "Design . Purpose . To create a quiz and a plan that demonstrates our understanding of the content we have learned this week Functionality . | Have three questions | Each question is a different type Button question (one answer) | Input question | check box question (multiple answers) | . | Topic will be about AP comp sci Description . Input . | The quiz will ask a question and the user will input an answer to the question Output . | The quiz will score you after each question and change the screen if you got the question correct | . Success . Button question . . This code allows you to select a button and if the button is correct, the screen changes to the next question | This code works by detecting if the button is pressed and changing the screen. | . Discovery .",
             "url": "https://ryanrob327.github.io/csp/week3/2022/09/08/App-Lab.html",
             "relUrl": "/week3/2022/09/08/App-Lab.html",
             "date": " • Sep 8, 2022"
