@@ -43,8 +43,3 @@ Hi Sammy, you are a great friend, I appreciate that every day you walk to and fr
 - Fly over during the national anthem at football game.
 - Karaoke with band leadership on Saturday.
 
-# Goals
-- Get an A on upcoming Calc quiz
-- Put up stage for marching band
-- Go to lunch with friends Monday
-- Try time some management skills to have more time to myself (time how long it takes to do homework for better reference next time)
