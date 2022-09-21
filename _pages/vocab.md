@@ -28,5 +28,7 @@ permalink: /vocab/
 ## Github
   - Where code can be stored on the web, used to clone, push, or pull changes in your code.
 
+## Json
+  - Test based format used for transferring data
 
 [^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
