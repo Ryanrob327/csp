@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Tri 1 Final Project Plan",
-            "content": "Project Purpose . Meet college board criteria: . use data abstraction | use procedural abstraction | show testing | . My idea, checkers, meets all criteria:s . data abstraction with a 2D array when loading the board and pieces. | procedural abstraction with how the player interacts with the screen and interacts with the pieces on the board. | . Team Roles . Ryan - scrum master Jeffery - backend Josh - frontend Eli - DevOps Chris - backend Khalid - frontend . Scrum Infographic . .",
+            "content": "Project Purpose . Meet college board criteria: . use data abstraction | use procedural abstraction | show testing | . My first idea, checkers, meets all criteria . data abstraction with a 2D array when loading the board and pieces. | procedural abstraction with how the player interacts with the screen and interacts with the pieces on the board. | . My second idea, a learning website similar to khan academy . great purpose. | needs some more thought to meet college board criteria. | . Team Roles . Ryan - scrum master Jeffery - backend Josh - frontend Eli - DevOps Chris - backend Khalid - frontend . Scrum Infographic . .",
             "url": "https://ryanrob327.github.io/csp/week5/2022/09/25/Final-scrum-roles.html",
             "relUrl": "/week5/2022/09/25/Final-scrum-roles.html",
             "date": " • Sep 25, 2022"
