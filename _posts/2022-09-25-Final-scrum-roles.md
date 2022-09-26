@@ -11,9 +11,13 @@ title: Tri 1 Final Project Plan
   - use procedural abstraction
   - show testing
 
-## My idea, checkers, meets all criteria:s
+## My first idea, checkers, meets all criteria
   - data abstraction with a 2D array when loading the board and pieces.
   - procedural abstraction with how the player interacts with the screen and interacts with the pieces on the board.
+
+## My second idea, a learning website similar to khan academy
+  - great purpose.
+  - needs some more thought to meet college board criteria.
 
 # Team Roles
 Ryan - scrum master
