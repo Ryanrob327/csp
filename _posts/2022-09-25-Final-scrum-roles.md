@@ -11,14 +11,17 @@ title: Tri 1 Final Project Plan
   - use procedural abstraction
   - show testing
 
-## My idea, checkers, meets all criteria:
+## My idea, checkers, meets all criteria:s
   - data abstraction with a 2D array when loading the board and pieces.
   - procedural abstraction with how the player interacts with the screen and interacts with the pieces on the board.
 
 # Team Roles
-Ryan - scrum master/frontend lead
-Jeffery - backend lead
+Ryan - scrum master
+Jeffery - backend
 Josh - frontend
-Eli - backend
+Eli - DevOps
 Chris - backend
 Khalid - frontend
+
+# Scrum Infographic
+![]({{ site.baseurl }}/images/Scrum Process.png)
