@@ -20,12 +20,12 @@ title: Tri 1 Final Project Plan
   - needs some more thought to meet college board criteria.
 
 # Team Roles
-Ryan - scrum master
-Jeffery - backend
-Josh - frontend
-Eli - DevOps
-Chris - backend
-Khalid - frontend
+- Ryan -> scrum master
+- Jeffery -> backend
+- Josh -> frontend
+- Eli -> DevOps
+- Chris -> backend
+- Khalid -> frontend
 
 # Scrum Infographic
 ![]({{ site.baseurl }}/images/Scrum Process.png)
