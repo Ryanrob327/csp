@@ -26,9 +26,16 @@ permalink: /vocab/
   - Command language written for unix shell
 
 ## Github
-  - Where code can be stored on the web, used to clone, push, or pull changes in your code.
+  - Where code can be stored on the web, used to clone, push, or pull changes in your code
 
 ## Json
   - Text based format used for transferring data
 
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+## EC2
+  - allows computing capacity in the amazon cloud servers
+
+## DNS
+  - Domain Name System is like the phonebook of the internet where you can access all domain names
+
+## Nginx
+  - open source web server that can be used for a multitude of tasks
