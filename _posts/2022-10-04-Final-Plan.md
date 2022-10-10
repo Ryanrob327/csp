@@ -10,6 +10,7 @@ title: Final Project Plan
     - This program will take data on the stock market from the polygon.io api 
     - The information for each graph/table will be stored in a dictionary with multiple values
     - you will be able to switch between different stock options to view
+
 # College board criteria
 ## 1. Program Purpose and Function
 ### purpose
