@@ -66,7 +66,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/csp/Overview/">Overview</a><a class="page-link" href="/csp/Frontend/">Frontend</a><a class="page-link" href="/csp/about/">About Me</a><a class="page-link" href="/csp/search/">Search</a><a class="page-link" href="/csp/categories/">Tags</a><a class="page-link" href="/csp/vocab/">Vocab</a></div>
+        <div class="trigger"><a class="page-link" href="/csp/Overview/">Overview</a><a class="page-link" href="/csp/Frontend/">Frontend</a><a class="page-link" href="/csp/_pages/03_college-board-proof.html">College board assignments</a><a class="page-link" href="/csp/about/">About Me</a><a class="page-link" href="/csp/search/">Search</a><a class="page-link" href="/csp/categories/">Tags</a><a class="page-link" href="/csp/vocab/">Vocab</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -151,7 +151,7 @@ window.onload = wrap_img;
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">RESTClient</span><span class="p">(</span><span class="s2">"RQQmTlSXibKSclKn0R4lj2Vtmzvw1Fjv"</span><span class="p">)</span> <span class="c1"># api key in quotes</span>
 
-<span class="n">aggs</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_aggs</span><span class="p">(</span><span class="s2">"AAPL"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"day"</span><span class="p">,</span> <span class="s2">"2022-04-04"</span><span class="p">,</span> <span class="s2">"2022-04-04"</span><span class="p">)</span>
+<span class="n">aggs</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_aggs</span><span class="p">(</span><span class="s2">"GME"</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"day"</span><span class="p">,</span> <span class="s2">"2022-10-12"</span><span class="p">,</span> <span class="s2">"2022-10-12"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">aggs</span><span class="p">)</span>
 </pre></div>
 
@@ -165,7 +165,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[Agg(open=174.57, high=178.49, low=174.44, close=178.44, volume=76545983.0, vwap=177.4855, timestamp=1649044800000, transactions=630374, otc=None)]
+<pre>[Agg(open=25.96, high=26.89, low=25.27, close=25.36, volume=3284353.0, vwap=25.9089, timestamp=1665547200000, transactions=38303, otc=None)]
 </pre>
 </div>
 </div>
@@ -184,10 +184,9 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stock</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"request stock above"</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_daily_open_close_agg</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="s2">"2022-04-04"</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_daily_open_close_agg</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="s2">"2022-10-12"</span><span class="p">)</span>
 
 
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">symbol</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">open</span><span class="p">)</span>
 </pre></div>
@@ -202,9 +201,8 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>DailyOpenCloseAgg(after_hours=178.36, close=178.44, from_='2022-04-04', high=178.49, low=174.44, open=174.57, pre_market=174.18, status='OK', symbol='AAPL', volume=76545983.0, otc=None)
-AAPL
-174.57
+<pre>GME
+25.96
 </pre>
 </div>
 </div>
