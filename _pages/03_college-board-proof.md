@@ -18,3 +18,9 @@ title: College board assignments
 ![]({{ site.baseurl }}/images/college board week 7.png)
 ## Problems I had
   - None, all questions correct
+
+# Week 8
+![]({{ site.baseurl }}/images/college board week 8.png)
+
+## Notes
+  - 
