@@ -297,6 +297,50 @@ window.onload = wrap_img;
 </div>
     
 
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">yearly_data</span><span class="p">(</span><span class="n">stock</span><span class="p">):</span>
+    
+    <span class="n">client</span> <span class="o">=</span> <span class="n">RESTClient</span><span class="p">(</span><span class="s2">"w4oXBFSyC3bTkpJeVwSnKt8iuwBgMeMy"</span><span class="p">)</span> <span class="c1"># api_key is used</span>
+    <span class="n">aggs</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_aggs</span><span class="p">(</span><span class="n">stock</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">"month"</span><span class="p">,</span> <span class="s2">"2021-01-01"</span><span class="p">,</span> <span class="s2">"2021-12-01"</span><span class="p">)</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">12</span><span class="p">):</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"2021-"</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"-1:"</span><span class="p">:</span> <span class="n">aggs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">open</span><span class="p">})</span>
+        <span class="c1">#time.sleep(12)</span>
+        
+    <span class="k">return</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">yearly_data</span><span class="p">(</span><span class="s2">"TSLA"</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{'2021-1-1:': 239.82}, {'2021-2-1:': 271.43}, {'2021-3-1:': 230.0367}, {'2021-4-1:': 229.4567}, {'2021-5-1:': 234.6}, {'2021-6-1:': 209.2667}, {'2021-7-1:': 227.9733}, {'2021-8-1:': 233.3333}, {'2021-9-1:': 244.6933}, {'2021-10-1:': 259.4667}, {'2021-11-1:': 381.6667}, {'2021-12-1:': 386.8983}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
