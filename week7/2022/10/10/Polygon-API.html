@@ -156,28 +156,14 @@ window.onload = wrap_img;
 
 <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"2022-"</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="s2">"-1"</span><span class="p">:</span> <span class="n">aggs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">open</span><span class="p">})</span>
+<span class="c1">#for i in range (1):</span>
+    <span class="c1">#data.append({"2022-"+str(i + 1)+"-1": aggs[i].open})</span>
     <span class="c1">#print("2022-" + str(i + 1) + "-1: " + str(aggs[i].open))</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="c1">#time.sleep(12)</span>
+<span class="c1">#print(data)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[{'2022-1-1': 37.3075}]
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -312,12 +298,13 @@ window.onload = wrap_img;
     <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">12</span><span class="p">):</span>
-        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"2021-"</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"-1:"</span><span class="p">:</span> <span class="n">aggs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">open</span><span class="p">})</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"date"</span><span class="p">:</span> <span class="s2">"2021-"</span> <span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"-1"</span><span class="p">,</span><span class="s2">"open"</span><span class="p">:</span> <span class="n">aggs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">open</span><span class="p">,</span> <span class="s2">"high"</span><span class="p">:</span> <span class="n">aggs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">high</span><span class="p">,</span>
+                     <span class="s2">"low"</span><span class="p">:</span> <span class="n">aggs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">low</span><span class="p">,</span> <span class="s2">"close"</span><span class="p">:</span> <span class="n">aggs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">close</span><span class="p">})</span>
         <span class="c1">#time.sleep(12)</span>
         
     <span class="k">return</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">yearly_data</span><span class="p">(</span><span class="s2">"TSLA"</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">yearly_data</span><span class="p">(</span><span class="s2">"GME"</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -330,7 +317,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[{'2021-1-1:': 239.82}, {'2021-2-1:': 271.43}, {'2021-3-1:': 230.0367}, {'2021-4-1:': 229.4567}, {'2021-5-1:': 234.6}, {'2021-6-1:': 209.2667}, {'2021-7-1:': 227.9733}, {'2021-8-1:': 233.3333}, {'2021-9-1:': 244.6933}, {'2021-10-1:': 259.4667}, {'2021-11-1:': 381.6667}, {'2021-12-1:': 386.8983}]
+<pre>[{'date': '2021-1-1', 'open': 4.75, 'high': 120.75, 'low': 4.27, 'close': 81.25}, {'date': '2021-2-1', 'open': 79.14, 'high': 80.5, 'low': 9.625, 'close': 25.435}, {'date': '2021-3-1', 'open': 26.135, 'high': 87.125, 'low': 24.9925, 'close': 47.455}, {'date': '2021-4-1', 'open': 48.34, 'high': 49.2423, 'low': 33, 'close': 43.3975}, {'date': '2021-5-1', 'open': 44.3725, 'high': 67.2, 'low': 34.125, 'close': 55.5}, {'date': '2021-6-1', 'open': 58.37, 'high': 86.165, 'low': 49.25, 'close': 53.535}, {'date': '2021-7-1', 'open': 53.35, 'high': 54.2075, 'low': 39.5025, 'close': 40.28}, {'date': '2021-8-1', 'open': 40.5, 'high': 56.75, 'low': 36.305, 'close': 54.56}, {'date': '2021-9-1', 'open': 56, 'high': 57.8598, 'low': 41.6975, 'close': 43.8675}, {'date': '2021-10-1', 'open': 44.85, 'high': 48.045, 'low': 41.4525, 'close': 45.8775}, {'date': '2021-11-1', 'open': 45.6325, 'high': 63.9225, 'low': 45.5125, 'close': 49.0525}, {'date': '2021-12-1', 'open': 49.85, 'high': 50.0263, 'low': 32.375, 'close': 37.0975}]
 </pre>
 </div>
 </div>
