@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: proof that I have completed all of the college board assignments
 categories: [college board]
-title: College board assignments
+title: CB Assignments
 ---
 # Week 6
 ![]({{ site.baseurl }}/images/college board proof v2.png)
