@@ -39,3 +39,9 @@ permalink: /vocab/
 
 ## Nginx
   - open source web server that can be used for a multitude of tasks
+
+
+# Unit 2
+## Binary
+Bits: 1's and 0's
+Bytes: groups of 1's and 0's that store data
