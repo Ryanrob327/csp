@@ -42,6 +42,27 @@ permalink: /vocab/
 
 
 # Unit 2
-## Binary
-Bits: 1's and 0's
-Bytes: groups of 1's and 0's that store data
+Bits, bytes, hexadecimals and nibbles:  various ways to store data using 1's and 0's
+
+Binary numbers:  integers are whole numbers and floating points are decimals, both are meant to reduce data consumption
+
+Binary Data Abstractions:  various ways binary data is represented in code
+
+Data Compression:  storing data in a way to reduce it's size
+
+
+# Unit 3
+Variables, Data Types, Assignment Operators:  ways to store data and make calculations in code
+
+Managing Complexity with Variables:  ways to store large amounts of data in code
+
+Algorithms, Sequence, Selection, Iteration:  ways to edit data and do stuff with it
+
+Expressions, Comparison Operators, Truth Tables: ways to represent logic in code 
+
+Characters, Strings, Length, Concatenation, Upper, Lower, Traversing Strings:  data types that have to do with characters as opposed to numbers
+
+Python If, Elif, Else conditionals; Nested Selection Statements:  basic conditionals that make for basic logic in code
+
+Python For, While loops with Range, with List: loops that allow for repeating certain processes
+
