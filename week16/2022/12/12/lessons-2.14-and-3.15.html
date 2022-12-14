@@ -137,7 +137,7 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h2"><a href="#Multiple-Choice">Multiple Choice </a></li>
 <li class="toc-entry toc-h2"><a href="#Short-Answer">Short Answer </a></li>
-<li class="toc-entry toc-h2"><a href="#Coding-Challenge">Coding Challenge </a></li>
+<li class="toc-entry toc-h2"><a href="#Coding-challenges">Coding challenges </a></li>
 </ul>
 </li>
 </ul><!--
@@ -189,8 +189,47 @@ window.onload = wrap_img;
 <li>Libraries are convenient because they provide procedures and prewritten code to maximize the efficiency of programmers</li>
 <li>This procedure takes a list of strings and returns who will buy the meal today</li>
 </ol>
-<h2 id="Coding-Challenge">
-<a class="anchor" href="#Coding-Challenge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coding Challenge<a class="anchor-link" href="#Coding-Challenge"> </a>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
+
+<span class="c1"># takes user input, puts it into a list of names</span>
+<span class="n">names_string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Give me everybody's names, seperated by a comma."</span><span class="p">)</span>
+<span class="n">names</span> <span class="o">=</span> <span class="n">names_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">","</span><span class="p">)</span>
+
+<span class="n">num_items</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+
+<span class="c1"># uses random to choose a random number</span>
+<span class="n">random_choice</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_items</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># associates random number with a name</span>
+<span class="n">person_who_will_pay</span> <span class="o">=</span> <span class="n">names</span><span class="p">[</span><span class="n">random_choice</span><span class="p">]</span>
+
+<span class="c1"># prints name</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">person_who_will_pay</span><span class="si">}</span><span class="s2"> is going to buy the meal today!"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Coding-challenges">
+<a class="anchor" href="#Coding-challenges" aria-hidden="true"><span class="octicon octicon-link"></span></a>Coding challenges<a class="anchor-link" href="#Coding-challenges"> </a>
 </h2>
 </div>
 </div>
@@ -203,15 +242,18 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="n">NAMES</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Aiden"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Brayden"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Bradley"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Harambe"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Charles"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"BigChungus"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Chad"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Brett"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Dorian"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Ryan"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Varalu"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Rohin"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"Advay"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">"SmallChungus"</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+<span class="n">NAMES</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Aiden"</span><span class="p">,</span> <span class="s2">"Brayden"</span><span class="p">,</span> <span class="s2">"Bradley"</span><span class="p">,</span> <span class="s2">"Harambe"</span><span class="p">,</span> <span class="s2">"Charles"</span><span class="p">,</span> <span class="s2">"BigChungus"</span><span class="p">,</span> <span class="s2">"Chad"</span><span class="p">,</span> <span class="s2">"Brett"</span><span class="p">,</span> <span class="s2">"Dorian"</span><span class="p">,</span> <span class="s2">"Ryan"</span><span class="p">,</span> <span class="s2">"Varalu"</span><span class="p">,</span> <span class="s2">"Rohin"</span><span class="p">,</span> <span class="s2">"Advay"</span><span class="p">,</span> <span class="s2">"SmallChungus"</span><span class="p">]</span>
+<span class="n">rand_list</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">def</span> <span class="nf">greatestRoll</span><span class="p">(</span><span class="n">names</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)):</span>
-        <span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">names</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">randomPeople</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">new_names</span><span class="p">):</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">new_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">number</span><span class="p">])</span>
+        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">new_names</span>
 
-<span class="n">greatestRoll</span><span class="p">(</span><span class="n">NAMES</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">randomPeople</span><span class="p">(</span><span class="n">NAMES</span><span class="p">,</span> <span class="n">rand_list</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -224,21 +266,52 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>5
-3
-8
-5
-5
-7
-10
-3
-11
-6
-3
-8
-6
-8
-{'Aiden': 0, 'Brayden': 0, 'Bradley': 0, 'Harambe': 0, 'Charles': 0, 'BigChungus': 0, 'Chad': 0, 'Brett': 0, 'Dorian': 0, 'Ryan': 0, 'Varalu': 0, 'Rohin': 0, 'Advay': 0, 'SmallChungus': 0, 0: 5, 1: 3, 2: 8, 3: 5, 4: 5, 5: 7, 6: 10, 7: 3, 8: 11, 9: 6, 10: 3, 11: 8, 12: 6, 13: 8}
+<pre>['Charles', 'BigChungus', 'Rohin', 'Dorian', 'Aiden']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">score1</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">score2</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">greatestRoll</span><span class="p">():</span>
+    <span class="n">score1</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+    <span class="n">score2</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">score1</span> <span class="o">&gt;</span> <span class="n">score2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Player 1 won with a score of "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">score1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" points!"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">score1</span> <span class="o">&lt;</span> <span class="n">score2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Player 2 won with a score of "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">score2</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" points!"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">score1</span> <span class="o">==</span> <span class="n">score2</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Both players tied with "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">score1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" points!"</span><span class="p">)</span>
+
+<span class="n">greatestRoll</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Player 1 won with a score of 9 points!
 </pre>
 </div>
 </div>
