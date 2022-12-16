@@ -76,4 +76,3 @@ Python For, While loops with Range, with List: loops that allow for repeating ce
 - Procedure - named group of programming instructions that may have parameters and return values.
 - Parameters - input values of a procedure.
 - Modularity - the practice of breaking a complex program into smaller, independent parts or modules that can be used and reused in different parts of the program.
-- 
