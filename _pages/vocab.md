@@ -66,3 +66,14 @@ Python If, Elif, Else conditionals; Nested Selection Statements:  basic conditio
 
 Python For, While loops with Range, with List: loops that allow for repeating certain processes
 
+
+
+- Documentation:  Text that explains the what, how, or why of your code.
+- Libraries:  A collection of prewritten code or procedures that coders can use to maximize their efficiency.
+- Application Programming Interface:  A type of software through several computers are able to communicate information amongst each other.
+- Simulation: simpler abstraction of a complicated natural phenomena
+- Experiment: done in the real world and provide actual results
+- Procedure - named group of programming instructions that may have parameters and return values.
+- Parameters - input values of a procedure.
+- Modularity - the practice of breaking a complex program into smaller, independent parts or modules that can be used and reused in different parts of the program.
+- 
