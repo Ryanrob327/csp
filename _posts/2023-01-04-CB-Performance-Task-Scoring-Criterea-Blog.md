@@ -31,4 +31,4 @@ title: Create Performance Task Criteria
 
 # Reflection
 
-- To fulfill all CB requirements My program will need to solve a problem or express innovation. my code must include
+- To fulfill all CB requirements My program will need to solve a problem or express innovation. my code must include multiple examples of iteration, algorithms, procedure
