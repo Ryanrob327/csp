@@ -31,4 +31,4 @@ title: Create Performance Task Criteria
 
 # Reflection
 
-- To fulfill all CB requirements My program will need to solve a problem or express innovation. my code must include multiple examples of iteration, algorithms, procedure
+- To fulfill all CB requirements my program must include multiple examples of iteration, algorithms, procedure, and functionality in order to solve a problem or express innovation. In order to do this I need to rigorously test my code and review my written response myself along with other people to make sure I have met all standards and checked off all requirements of college board.
