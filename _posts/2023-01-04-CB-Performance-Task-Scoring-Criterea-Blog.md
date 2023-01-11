@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: After looking at the two create performance tasks made by former students these are the scores I gave them.
-categories: [week16]
+categories: [week17]
 title: Create Performance Task Criteria
 ---
 
