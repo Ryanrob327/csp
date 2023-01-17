@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -294,7 +294,7 @@ Representation to Re-Create the object:
 <h1 id="CPT-related-class">
 <a class="anchor" href="#CPT-related-class" aria-hidden="true"><span class="octicon octicon-link"></span></a>CPT related class<a class="anchor-link" href="#CPT-related-class"> </a>
 </h1>
-<p>This class is related to my create performance task where the user plays a game about guessing the constructor of an F1 car</p>
+<p>This class is related to my create performance task where the user can input information about their account like their name, password, and email</p>
 
 </div>
 </div>
@@ -306,40 +306,73 @@ Representation to Re-Create the object:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="kn">import</span> <span class="nn">json</span>
+    
 
-<span class="k">class</span> <span class="nc">Constructor</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">drivers</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">drivers</span> <span class="o">=</span> <span class="n">drivers</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">chosenDriver</span> <span class="o">=</span> <span class="kc">None</span>
-        
-    <span class="k">def</span> <span class="nf">chooseRandom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">randomNum</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">drivers</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">drivers</span><span class="p">[</span><span class="n">randomNum</span><span class="p">]:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">chosenDriver</span> <span class="o">=</span> <span class="n">key</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">chosenDriver</span>
-        
-    <span class="k">def</span> <span class="nf">guessConstructor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">drivers</span><span class="p">)):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">drivers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">chosenDriver</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">drivers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-                <span class="k">return</span> <span class="s2">"yes"</span>
-                
-                
-        
+<span class="k">class</span> <span class="nc">User</span><span class="p">:</span>    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">password</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="n">password</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_email</span> <span class="o">=</span> <span class="n">email</span>
 
-<span class="n">drivers</span> <span class="o">=</span> <span class="p">[</span>
-           <span class="p">{</span><span class="s2">"Max Verstappen"</span><span class="p">:</span> <span class="s2">"Red Bull"</span><span class="p">},</span>
-           <span class="p">{</span><span class="s2">"Logan Sargeant"</span><span class="p">:</span> <span class="s2">"Williams"</span><span class="p">},</span>
-           <span class="p">{</span><span class="s2">"Lando Norris"</span><span class="p">:</span> <span class="s2">"McLaren"</span><span class="p">},</span>
-           <span class="p">{</span><span class="s2">"Pierre Gasly"</span><span class="p">:</span> <span class="s2">"Alpine"</span><span class="p">},</span>
-           <span class="p">{</span><span class="s2">"Sergio Perez"</span><span class="p">:</span> <span class="s2">"Red Bull"</span><span class="p">},</span>
-           <span class="p">{</span><span class="s2">"Fernando Alonso"</span><span class="p">:</span> <span class="s2">"Aston Martin Racing"</span><span class="p">}</span>
-            <span class="p">]</span>
-<span class="n">constructor</span> <span class="o">=</span> <span class="n">Constructor</span><span class="p">(</span><span class="n">drivers</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">constructor</span><span class="o">.</span><span class="n">chooseRandom</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">constructor</span><span class="o">.</span><span class="n">guessConstructor</span><span class="p">())</span>
+    <span class="c1"># getter method for username</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_name</span>
+    
+    <span class="c1"># setter method for username</span>
+    <span class="nd">@name</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        
+    <span class="c1"># getter method for password</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">password</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_password</span>
+    
+    <span class="c1"># setter method for password</span>
+    <span class="nd">@password</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_password</span> <span class="o">=</span> <span class="n">password</span>
+  
+    <span class="c1"># getter method for email</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">email</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_email</span>
+    
+    <span class="c1"># setter method for email</span>
+    <span class="nd">@email</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">email</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_email</span> <span class="o">=</span> <span class="n">email</span>
+    
+    <span class="c1"># dictionary is customized, removing password for security purposes</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">"name"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">"email"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">email</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">dict</span>
+  
+    <span class="c1"># output content using json dumps, this is ready for API response</span>
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="p">)</span>
+    
+    <span class="c1"># output command to recreate the object, uses attribute directly</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">'User(username=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="si">}</span><span class="s1">, password=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_password</span><span class="si">}</span><span class="s1">,email=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_email</span><span class="si">}</span><span class="s1">)'</span>
+    
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+    
+    <span class="n">u1</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'Ryan'</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="s1">'Password'</span><span class="p">,</span> <span class="n">email</span> <span class="o">=</span> <span class="s1">'ryanrob327@gmail.com'</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"JSON ready string:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">u1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Raw Variables of object:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="nb">vars</span><span class="p">(</span><span class="n">u1</span><span class="p">),</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Raw Attributes and Methods of object:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="nb">dir</span><span class="p">(</span><span class="n">u1</span><span class="p">),</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Representation to Re-Create the object:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">u1</span><span class="p">),</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span> 
 </pre></div>
 
     </div>
@@ -352,14 +385,18 @@ Representation to Re-Create the object:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Sergio Perez
-dict_keys(['Max Verstappen'])
-dict_keys(['Logan Sargeant'])
-dict_keys(['Lando Norris'])
-dict_keys(['Pierre Gasly'])
-dict_keys(['Sergio Perez'])
-dict_keys(['Fernando Alonso'])
-None
+<pre>JSON ready string:
+ {"name": "Ryan", "email": "ryanrob327@gmail.com"} 
+
+Raw Variables of object:
+ {'_name': 'Ryan', '_password': 'Password', '_email': 'ryanrob327@gmail.com'} 
+
+Raw Attributes and Methods of object:
+ ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_email', '_name', '_password', 'dictionary', 'email', 'name', 'password'] 
+
+Representation to Re-Create the object:
+ User(username=Ryan, password=Password,email=ryanrob327@gmail.com) 
+
 </pre>
 </div>
 </div>
