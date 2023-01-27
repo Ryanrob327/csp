@@ -28,4 +28,10 @@ Q42 - Car manufacturer simulations
   - this question had all options as correct, I did no think this was possible and because my knowledge of simulations is limited I only selected what I thought was correct
   - from this question I have learned that college board will make trick questions to throw you off, and you must carefully review directions to ensure the questions are correct
 
+Q45 - Benefits of a heuristic solution
+  - This problem asked questions about heuristic solutions which I am not entirely familiar with
+  - to fix this in the future I will do more review by creating a list of all topics on the test and going over them extra times
+
 # Reflection
+
+The results of this test were decent but still worse than expected, my biggest problem is that I do not spend enough time to review my answers and think through the logic of my choices twice. However, on the AP test I will need to be able to answer these questions quickly. To accomplish this I will need to spend extra time studying the course material so that when the AP test comes around I will already be familiar with the types of questions and topics.
