@@ -12,4 +12,4 @@ Computer bias describes systematic and repeatable errors in a computer system th
 
 # Crowd Sourcing
 
-With 150 students, the csp classroom on the Del Norte campus has plenty of opportunity for crowdsourcing, students can use crowd sourcing in their projects to get work done at a faster rate by using data inputted by other students or people using their program. The use of crowd sourcing depends on the individuals project requirements, for example, in my project we need people to enter in information about themselves and create an account for our dating site otherwise we could not do it ourselves.
+With 150 students, the csp classroom on the Del Norte campus has plenty of opportunity for crowdsourcing, students can use crowd sourcing in their projects to get work done at a faster rate by using data inputted by other students or people using their program. The use of crowd sourcing depends on the individuals project requirements, for example, in my project we need people to enter in information about themselves and create an account for our dating site otherwise we could not populate an entire dating site with accounts ourselves.
