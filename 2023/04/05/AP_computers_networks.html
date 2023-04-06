@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      6 min read
     
 </span></p>
 
@@ -121,14 +121,14 @@ window.onload = wrap_img;
 
 <p>Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.</p>
 <ul>
-  <li>Input devices</li>
-  <li>Output devices</li>
-  <li>Program File</li>
-  <li>Program Code</li>
-  <li>Processes</li>
-  <li>Ports</li>
-  <li>Data File</li>
-  <li>Inspect Running Code</li>
+  <li>Input devices: keyboard, mouse</li>
+  <li>Output devices: speaker, screen</li>
+  <li>Program File: vscode, google chrome</li>
+  <li>Program Code: .py files, .ipynb files</li>
+  <li>Processes:</li>
+  <li>Ports: USB, Audio jack,</li>
+  <li>Data File: .PNG files, .CSV files</li>
+  <li>Inspect Running Code:</li>
   <li>Inspect Variables</li>
 </ul>
 
@@ -153,17 +153,43 @@ window.onload = wrap_img;
       <li>Bandwidth is usually measured in bits per second</li>
     </ul>
   </li>
-  <li>Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use <code class="language-plaintext highlighter-rouge">traceroute</code> and <code class="language-plaintext highlighter-rouge">ping</code> commands from Linux Terminal.
-    <ul>
-      <li>Path</li>
-      <li>Route</li>
-      <li>Computer System</li>
-      <li>Computer Device</li>
-      <li>Bandwidth</li>
-      <li>Computer Network</li>
-    </ul>
-  </li>
+  <li>Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use <code class="language-plaintext highlighter-rouge">traceroute</code> and <code class="language-plaintext highlighter-rouge">ping</code> commands from Linux Terminal.</li>
 </ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Path</td>
+      <td>sequence of connected devices starting at sender ending at receiver</td>
+    </tr>
+    <tr>
+      <td>Route</td>
+      <td>Process of finding path from sender to receiver</td>
+    </tr>
+    <tr>
+      <td>Computer System</td>
+      <td>group of devices and programs working towards common purpose</td>
+    </tr>
+    <tr>
+      <td>Computer Device</td>
+      <td>physical device that can run program i.e. computer, phone, laptop etc.</td>
+    </tr>
+    <tr>
+      <td>Bandwidth</td>
+      <td>max amount of data that can be sent in a certain time</td>
+    </tr>
+    <tr>
+      <td>Computer Network</td>
+      <td>group of devices capable of sending or receiving data</td>
+    </tr>
+  </tbody>
+</table>
 
 <blockquote>
   <p>Watch/review College Board Daily Video 4.1.2</p>
@@ -188,11 +214,99 @@ window.onload = wrap_img;
       <li>The world wide web uses the internet</li>
     </ul>
   </li>
-  <li>
-    <p>Draw a diagram showing the internet and its many levels. A preferred diagram would use your knowledge of frontend, backend, deployment (GitHub Page, AWS, EC2, Docker, Nginx, Certbot, DNS, APIs).</p>
-  </li>
+  <li>Draw a diagram showing the internet and its many levels. A preferred diagram would use your knowledge of frontend, backend, deployment (GitHub Page, AWS, EC2, Docker, Nginx, Certbot, DNS, APIs).</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                                              User
+                                               |
+                                               |
+                                               V
+                                         Frontend
+                                        Web Browser
+                                               |
+                                               |
+                                               V
+                                         Backend
+                                       Web Server
+                                               |
+           ___________                       |
+          |           |                      V
+          |  GitHub   |                  Deployment
+          |  Pages    |                 Technologies
+          |___________|                      |
+                 |                            |
+                 |                            V
+                 |                       Infrastructure
+                 |                        Technologies
+                 |                            |
+                 V                            |
+           AWS EC2 Instances                  |
+                 |                            V
+                 |                      Containerization
+                 |                    Technologies
+                 |                            |
+                 V                            |
+               Docker                         |
+                 |                            V
+                 |                        Proxy Server
+                 |                   (e.g., Nginx)
+                 |                            |
+                 V                            |
+               Certbot                        |
+                 |                            V
+                 |                         DNS
+                 |                            |
+                 |                            |
+                 V                            |
+            APIs/Endpoints               Load Balancer
+                                               |
+                                               V
+                                          Database
+
+</code></pre></div></div>
+
+<ul>
   <li>Complete True of False Questions</li>
 </ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>question</th>
+      <th>T or F</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Open standards and protocols allow many different developers to build software and hardware for the internet</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>IETF is a task force used to enforce laws and keep certain people out of the internet</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Routes are determined in advance and are not flexible</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>A protocol is an agreed upon set of rules that specify behavior of a system</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>UDP guarantees transfers and is faster</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>WWW is the internet</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>HTTP is protocol used by WWW</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="fault-tolerance">
 <a class="anchor" href="#fault-tolerance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fault Tolerance</h3>
@@ -201,21 +315,28 @@ window.onload = wrap_img;
 </blockquote>
 
 <ul>
-  <li>Complete the network activity, summarize your understanding of fault tolerance.</li>
+  <li>Complete the network activity, summarize your understanding of fault tolerance.
+    <ul>
+      <li>Fault tolerance is a network’s ability to withstand disconnections. Networks use many interconnected nodes to guarantee that no one or two interrupted connections can take down a system.</li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="parallel-and-distributed-computing">
 <a class="anchor" href="#parallel-and-distributed-computing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parallel and Distributed Computing</h3>
 <blockquote>
-  <p>Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks…</p>
+  <p>Review previous lecture on Parallel Computing and watch Daily video 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks…</p>
 </blockquote>
 
 <ul>
   <li>
-    <p>What is naturally Distributed in Frontend/Backend archeticture?</p>
+    <p>What is naturally Distributed in Frontend/Backend architecture? - Data</p>
   </li>
   <li>
     <p>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a></p>
+    <ul>
+      <li>this command only utilizes one worker to complete tasks, to complete more tasks at a higher speed, increase the amount of workers.</li>
+    </ul>
   </li>
 </ul>
 
