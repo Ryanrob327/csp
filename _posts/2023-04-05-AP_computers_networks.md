@@ -24,14 +24,14 @@ List specification of your Computer, or Computers if working as Pair/Trio
 - OS: Windows 11
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
-- Input devices
-- Output devices
-- Program File
-- Program Code
-- Processes
-- Ports
-- Data File
-- Inspect Running Code
+- Input devices: keyboard, mouse
+- Output devices: speaker, screen
+- Program File: vscode, google chrome
+- Program Code: .py files, .ipynb files
+- Processes: 
+- Ports: USB, Audio jack, 
+- Data File: .PNG files, .CSV files
+- Inspect Running Code: 
 - Inspect Variables
 
 
@@ -52,12 +52,15 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     - Bandwidth is usually measured in bits per second
 
 - Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use `traceroute` and `ping` commands from Linux Terminal.  
-    - Path 
-    - Route
-    - Computer System
-    - Computer Device
-    - Bandwidth
-    - Computer Network
+
+|Term|Definition|
+|-|-|
+|Path|sequence of connected devices starting at sender ending at receiver|
+|Route|Process of finding path from sender to receiver|
+|Computer System|group of devices and programs working towards common purpose|
+|Computer Device|physical device that can run program i.e. computer, phone, laptop etc.|
+|Bandwidth|max amount of data that can be sent in a certain time|
+|Computer Network|group of devices capable of sending or receiving data|
 
 > Watch/review College Board Daily Video 4.1.2
 
@@ -79,20 +82,80 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 - Draw a diagram showing the internet and its many levels. A preferred diagram would use your knowledge of frontend, backend, deployment (GitHub Page, AWS, EC2, Docker, Nginx, Certbot, DNS, APIs).
 
+```
+                                              User
+                                               |
+                                               |
+                                               V
+                                         Frontend
+                                        Web Browser
+                                               |
+                                               |
+                                               V
+                                         Backend
+                                       Web Server
+                                               |
+           ___________                       |
+          |           |                      V
+          |  GitHub   |                  Deployment
+          |  Pages    |                 Technologies
+          |___________|                      |
+                 |                            |
+                 |                            V
+                 |                       Infrastructure
+                 |                        Technologies
+                 |                            |
+                 V                            |
+           AWS EC2 Instances                  |
+                 |                            V
+                 |                      Containerization
+                 |                    Technologies
+                 |                            |
+                 V                            |
+               Docker                         |
+                 |                            V
+                 |                        Proxy Server
+                 |                   (e.g., Nginx)
+                 |                            |
+                 V                            |
+               Certbot                        |
+                 |                            V
+                 |                         DNS
+                 |                            |
+                 |                            |
+                 V                            |
+            APIs/Endpoints               Load Balancer
+                                               |
+                                               V
+                                          Database
+
+```
+
 - Complete True of False Questions
+
+|question|T or F|
+|-|-|
+|Open standards and protocols allow many different developers to build software and hardware for the internet|True|
+|IETF is a task force used to enforce laws and keep certain people out of the internet|False|
+|Routes are determined in advance and are not flexible|False|
+|A protocol is an agreed upon set of rules that specify behavior of a system|True|
+|UDP guarantees transfers and is faster|False|
+|WWW is the internet|False|
+|HTTP is protocol used by WWW|True|
 
 ### Fault Tolerance
 > Watch both Daily videos for 4.2
 
 - Complete the network activity, summarize your understanding of fault tolerance.
-
+  - Fault tolerance is a network's ability to withstand disconnections. Networks use many interconnected nodes to guarantee that no one or two interrupted connections can take down a system. 
 
 ### Parallel and Distributed Computing
-> Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
+> Review previous lecture on Parallel Computing and watch Daily video 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
 
-- What is naturally Distributed in Frontend/Backend archeticture?  
+- What is naturally Distributed in Frontend/Backend architecture? - Data
 
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
+  - this command only utilizes one worker to complete tasks, to complete more tasks at a higher speed, increase the amount of workers.
 
 
 > Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.
