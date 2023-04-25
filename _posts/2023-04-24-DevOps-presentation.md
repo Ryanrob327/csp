@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: DevOps
-categories: [week30]
+categories: [week31]
 title: DevOps Hacks
 ---
 
