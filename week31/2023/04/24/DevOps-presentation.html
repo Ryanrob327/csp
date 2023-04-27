@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      2 min read
     
 </span></p>
 
@@ -96,22 +96,11 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h2"><a href="#kasm-virtual-desktop">KASM Virtual Desktop</a></li>
 <li class="toc-entry toc-h2"><a href="#aws-vs-sql-databases">AWS vs. SQL databases</a></li>
-<li class="toc-entry toc-h2"><a href="#different-aws-databases">Different AWS databases</a></li>
-<li class="toc-entry toc-h2"><a href="#aws-development">AWS Development</a></li>
+<li class="toc-entry toc-h2"><a href="#aws-databases-hacks">AWS DATABASES HACKS:</a></li>
 <li class="toc-entry toc-h2"><a href="#duckdns">DuckDNS</a></li>
-<li class="toc-entry toc-h2"><a href="#certbot-alternatives">Certbot Alternatives</a></li>
 <li class="toc-entry toc-h2"><a href="#certbot">Certbot</a></li>
-</ul><h2 id="kasm-virtual-desktop">
-<a class="anchor" href="#kasm-virtual-desktop" aria-hidden="true"><span class="octicon octicon-link"></span></a>KASM Virtual Desktop</h2>
-
-<ol>
-  <li>Virtual desktops allow users to access a complete desktop environment hosted on a remote server or cloud infrastructure, rather than relying on a physical computer. KASM is a cloud-based virtual desktop platform designed for security-sensitive environments, with advanced features like hardware-based security and encrypted data storage. In an AP CSP (Computer Science Principles) environment, virtual desktops like KASM can be utilized to provide students with a consistent and secure computing environment, regardless of the hardware and software available on their local machines.</li>
-  <li>
-</ol>
-
-<h2 id="aws-vs-sql-databases">
+</ul><h2 id="aws-vs-sql-databases">
 <a class="anchor" href="#aws-vs-sql-databases" aria-hidden="true"><span class="octicon octicon-link"></span></a>AWS vs. SQL databases</h2>
 
 <ol>
@@ -120,25 +109,28 @@ window.onload = wrap_img;
   <li>(C) Amazon Neptune allows you to store and query highly connected databases</li>
 </ol>
 
-<h2 id="different-aws-databases">
-<a class="anchor" href="#different-aws-databases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Different AWS databases</h2>
+<h2 id="aws-databases-hacks">
+<a class="anchor" href="#aws-databases-hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>AWS DATABASES HACKS:</h2>
 
+<p>QUIZ #1:</p>
 <ol>
-  <li>(A) Relational databases are based on rows and columns and can only be used for structured data</li>
-  <li>(A) Amazon ElastiCache is an example of an in-memory database that can be used for apps like gaming.</li>
-  <li>(B) To show how to query data from a DynamoDB table.</li>
+  <li>C</li>
+  <li>A</li>
+  <li>C</li>
 </ol>
 
-<h2 id="aws-development">
-<a class="anchor" href="#aws-development" aria-hidden="true"><span class="octicon octicon-link"></span></a>AWS Development</h2>
-
-<ul>
-  <li>There are many outdated NginX/Docker functionalities to address because NginX and Docker are constantly being changed and updated. You can find all deprecated versions of docker in the docker docs <a href="https://docs.docker.com/engine/deprecated/">here</a>
-</li>
-</ul>
+<p>QUIZ #2:</p>
+<ol>
+  <li>C</li>
+  <li>D</li>
+  <li>C</li>
+</ol>
 
 <h2 id="duckdns">
 <a class="anchor" href="#duckdns" aria-hidden="true"><span class="octicon octicon-link"></span></a>DuckDNS</h2>
+
+<p><img src="/csp/images/pros-cons.png" alt="">
+<img src="/csp/images/AWS-duckdns-diagram.png" alt=""></p>
 
 <p>Why do we use DNS? - DNS (Domain Name System) is used to translate human-friendly domain names, such as www.example.com, into IP addresses, which are required for identifying and locating resources on the internet.
 How does Duck DNS work? - Duck DNS is a dynamic DNS service that allows users to associate a domain name with their dynamic IP address, allowing them to access their devices or services hosted on the internet even if their IP address changes.
@@ -146,8 +138,15 @@ What makes Duck DNS unique? - Duck DNS is unique because it offers a free, easy-
 How is Duck DNS useful for our projects? - Duck DNS is useful for projects that require remote access to devices or services hosted on the internet, but have dynamic IP addresses, as it allows users to access them using a static domain name instead of constantly changing IP addresses.
 What are the steps to set up Duck DNS? - The steps to set up Duck DNS typically involve creating an account on the Duck DNS website, selecting a domain name, installing a client or script on the server or device that needs to be accessed remotely, and configuring it to update the DNS records with the current IP address.</p>
 
-<h2 id="certbot-alternatives">
-<a class="anchor" href="#certbot-alternatives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Certbot Alternatives</h2>
+<p><img src="/csp/images/NginX-Lightpd-Ven.png" alt="">
+<img src="/csp/images/pros-cons.png" alt=""></p>
+
+<h2 id="certbot">
+<a class="anchor" href="#certbot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Certbot</h2>
+
+<p>Luckily I got Certbot downloaded successfully. Unfortunately, CertBot would not accept my email giving me this error:</p>
+
+<p><img src="/csp/images/CertBot-fail.png" alt=""></p>
 
 <p>OpenSSL and LibreSSL are two popular open-source cryptographic libraries used for implementing SSL/TLS protocols in various applications. While they share similarities, there are some differences in their security features.</p>
 
@@ -156,10 +155,6 @@ What are the steps to set up Duck DNS? - The steps to set up Duck DNS typically 
 <p>LibreSSL, on the other hand, is a fork of OpenSSL that was created with the goal of providing a more secure and modern implementation. It has a smaller codebase, with a focus on removing deprecated and legacy code to reduce attack surface. As a result, LibreSSL aims to provide a more secure option compared to OpenSSL.</p>
 
 <p>Both OpenSSL and LibreSSL have active security teams that quickly address vulnerabilities through regular updates and patches. However, it’s important to note that no software is completely immune to vulnerabilities, and it’s crucial to keep both libraries updated to the latest versions and follow best practices for secure implementation and configuration to mitigate potential risks.</p>
-
-<h2 id="certbot">
-<a class="anchor" href="#certbot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Certbot</h2>
-
 
   </div><a class="u-url" href="/csp/week31/2023/04/24/DevOps-presentation.html" hidden></a>
 </article>
