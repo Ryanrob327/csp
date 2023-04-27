@@ -5,6 +5,14 @@ description: DevOps
 categories: [week31]
 title: DevOps Hacks
 ---
+
+## KASM
+
+1. Virtual desktops allow users to access a complete desktop environment hosted on a remote server or cloud infrastructure, rather than relying on a physical computer. KASM is a cloud-based virtual desktop platform designed for security-sensitive environments, with advanced features like hardware-based security and encrypted data storage. In an AP CSP (Computer Science Principles) environment, virtual desktops like KASM can be utilized to provide students with a consistent and secure computing environment, regardless of the hardware and software available on their local machines.
+2. Ran into an error:  0curl: (6) Could not resolve host: kasm-static-content.s3.amazonaws.com
+![]({{ site.baseurl }}/images/KASM-error.png)
+
+
 ## AWS vs. SQL databases
 
 1. (c) SQLite is not an AWS database option
