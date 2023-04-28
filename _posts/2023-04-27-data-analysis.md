@@ -16,7 +16,7 @@ title: Data Analysis Hacks
 6. While NumPy and Pandas are powerful tools for data analysis, they do have some limitations. For example, NumPy is limited in its ability to handle missing or heterogeneous data, and Pandas can be slow for large datasets. In such cases, other data analysis tools such as Apache Spark, Dask, or Hadoop may be necessary. 
 7. Predictive analysis can be used to improve decision-making and optimize business processes by identifying patterns and trends in data that can be used to make informed decisions. For example, predictive analysis can be used to forecast sales or customer behavior, identify areas for process improvement, or optimize supply chain management.
 8. Example code:
-   
+
 ```
 import pandas as pd
 from sklearn.model_selection import train_test_split
