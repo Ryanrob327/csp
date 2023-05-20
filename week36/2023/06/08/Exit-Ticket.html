@@ -140,7 +140,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Run jupyter notebook server with 'Jupyter Notebook'</p>
+<p>Run jupyter notebook server with 'jupyter notebook'</p>
 
 </div>
 </div>
@@ -153,65 +153,115 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
-<span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Canvas Example<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-      <span class="nt">canvas</span> <span class="p">{</span>
-        <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">black</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">id</span><span class="o">=</span><span class="s">"myCanvas"</span> <span class="na">width</span><span class="o">=</span><span class="s">"400"</span> <span class="na">height</span><span class="o">=</span><span class="s">"400"</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
-
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">"UTF-8"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">"X-UA-Compatible"</span> <span class="na">content</span><span class="o">=</span><span class="s">"IE=edge"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"viewport"</span> <span class="na">content</span><span class="o">=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>sharks and minos<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">width</span><span class="o">=</span><span class="s">"800"</span> <span class="na">height</span><span class="o">=</span><span class="s">"600"</span> <span class="na">id</span><span class="o">=</span><span class="s">"canvas"</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-      <span class="c1">// Get the canvas element</span>
-      <span class="kr">const</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'myCanvas'</span><span class="p">);</span>
+        <span class="kr">const</span> <span class="nx">SCALE</span> <span class="o">=</span> <span class="mf">2</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">WIDTH</span> <span class="o">=</span> <span class="mf">16</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">HEIGHT</span> <span class="o">=</span> <span class="mf">18</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">SCALED_WIDTH</span> <span class="o">=</span> <span class="nx">SCALE</span> <span class="o">*</span> <span class="nx">WIDTH</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">SCALED_HEIGHT</span> <span class="o">=</span> <span class="nx">SCALE</span> <span class="o">*</span> <span class="nx">HEIGHT</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">CYCLE_LOOP</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0</span><span class="p">,</span> <span class="mf">1</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="mf">2</span><span class="p">];</span>
+<span class="kr">const</span> <span class="nx">FACING_DOWN</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">FACING_UP</span> <span class="o">=</span> <span class="mf">1</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">FACING_LEFT</span> <span class="o">=</span> <span class="mf">2</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">FACING_RIGHT</span> <span class="o">=</span> <span class="mf">3</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">FRAME_LIMIT</span> <span class="o">=</span> <span class="mf">12</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">MOVEMENT_SPEED</span> <span class="o">=</span> <span class="mf">2</span><span class="p">;</span>
 
-      <span class="c1">// Get the 2D rendering context</span>
-      <span class="kr">const</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">'2d'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'canvas'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s1">'2d'</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">keyPresses</span> <span class="o">=</span> <span class="p">{};</span>
+<span class="kd">let</span> <span class="nx">currentDirection</span> <span class="o">=</span> <span class="nx">FACING_DOWN</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">currentLoopIndex</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">frameCount</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">positionX</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">positionY</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">img</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
 
-      <span class="c1">// Set the initial position of the square</span>
-      <span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="mf">50</span><span class="p">;</span>
-      <span class="kd">let</span> <span class="nx">y</span> <span class="o">=</span> <span class="mf">50</span><span class="p">;</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'keydown'</span><span class="p">,</span> <span class="nx">keyDownListener</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nx">keyDownListener</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">keyPresses</span><span class="p">[</span><span class="nx">event</span><span class="p">.</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
 
-      <span class="c1">// Set the fill color</span>
-      <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="s1">'red'</span><span class="p">;</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'keyup'</span><span class="p">,</span> <span class="nx">keyUpListener</span><span class="p">);</span>
+<span class="kd">function</span> <span class="nx">keyUpListener</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">keyPresses</span><span class="p">[</span><span class="nx">event</span><span class="p">.</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
 
-      <span class="c1">// Draw the square at the current position</span>
-      <span class="kd">function</span> <span class="nx">drawSquare</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">ctx</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span> <span class="c1">// Clear the canvas</span>
-        <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillRect</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="mf">50</span><span class="p">,</span> <span class="mf">50</span><span class="p">);</span> <span class="c1">// Draw the square</span>
+<span class="kd">function</span> <span class="nx">loadImage</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png'</span><span class="p">;</span>
+  <span class="nx">img</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">gameLoop</span><span class="p">);</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">drawFrame</span><span class="p">(</span><span class="nx">frameX</span><span class="p">,</span> <span class="nx">frameY</span><span class="p">,</span> <span class="nx">canvasX</span><span class="p">,</span> <span class="nx">canvasY</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">ctx</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">img</span><span class="p">,</span>
+                <span class="nx">frameX</span> <span class="o">*</span> <span class="nx">WIDTH</span><span class="p">,</span> <span class="nx">frameY</span> <span class="o">*</span> <span class="nx">HEIGHT</span><span class="p">,</span> <span class="nx">WIDTH</span><span class="p">,</span> <span class="nx">HEIGHT</span><span class="p">,</span>
+                <span class="nx">canvasX</span><span class="p">,</span> <span class="nx">canvasY</span><span class="p">,</span> <span class="nx">SCALED_WIDTH</span><span class="p">,</span> <span class="nx">SCALED_HEIGHT</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">loadImage</span><span class="p">();</span>
+
+<span class="kd">function</span> <span class="nx">gameLoop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">ctx</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span><span class="p">,</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span><span class="p">);</span>
+
+  <span class="kd">let</span> <span class="nx">hasMoved</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">keyPresses</span><span class="p">.</span><span class="nx">w</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">moveCharacter</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="o">-</span><span class="nx">MOVEMENT_SPEED</span><span class="p">,</span> <span class="nx">FACING_UP</span><span class="p">);</span>
+    <span class="nx">hasMoved</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">keyPresses</span><span class="p">.</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">moveCharacter</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="nx">MOVEMENT_SPEED</span><span class="p">,</span> <span class="nx">FACING_DOWN</span><span class="p">);</span>
+    <span class="nx">hasMoved</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">keyPresses</span><span class="p">.</span><span class="nx">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">moveCharacter</span><span class="p">(</span><span class="o">-</span><span class="nx">MOVEMENT_SPEED</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">FACING_LEFT</span><span class="p">);</span>
+    <span class="nx">hasMoved</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">keyPresses</span><span class="p">.</span><span class="nx">d</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">moveCharacter</span><span class="p">(</span><span class="nx">MOVEMENT_SPEED</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">FACING_RIGHT</span><span class="p">);</span>
+    <span class="nx">hasMoved</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="nx">hasMoved</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">frameCount</span><span class="o">++</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">frameCount</span> <span class="o">&gt;=</span> <span class="nx">FRAME_LIMIT</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">frameCount</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+      <span class="nx">currentLoopIndex</span><span class="o">++</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">currentLoopIndex</span> <span class="o">&gt;=</span> <span class="nx">CYCLE_LOOP</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">currentLoopIndex</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
       <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">hasMoved</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">currentLoopIndex</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span>
+  <span class="p">}</span>
 
-      <span class="c1">// Update the square's position based on arrow key press</span>
-      <span class="kd">function</span> <span class="nx">moveSquare</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">switch</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">keyCode</span><span class="p">)</span> <span class="p">{</span>
-          <span class="k">case</span> <span class="mf">37</span><span class="o">:</span> <span class="c1">// Left arrow key</span>
-            <span class="nx">x</span> <span class="o">-=</span> <span class="mf">10</span><span class="p">;</span>
-            <span class="k">break</span><span class="p">;</span>
-          <span class="k">case</span> <span class="mf">38</span><span class="o">:</span> <span class="c1">// Up arrow key</span>
-            <span class="nx">y</span> <span class="o">-=</span> <span class="mf">10</span><span class="p">;</span>
-            <span class="k">break</span><span class="p">;</span>
-          <span class="k">case</span> <span class="mf">39</span><span class="o">:</span> <span class="c1">// Right arrow key</span>
-            <span class="nx">x</span> <span class="o">+=</span> <span class="mf">10</span><span class="p">;</span>
-            <span class="k">break</span><span class="p">;</span>
-          <span class="k">case</span> <span class="mf">40</span><span class="o">:</span> <span class="c1">// Down arrow key</span>
-            <span class="nx">y</span> <span class="o">+=</span> <span class="mf">10</span><span class="p">;</span>
-            <span class="k">break</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="nx">drawSquare</span><span class="p">();</span> <span class="c1">// Redraw the square at the new position</span>
-      <span class="p">}</span>
+  <span class="nx">drawFrame</span><span class="p">(</span><span class="nx">CYCLE_LOOP</span><span class="p">[</span><span class="nx">currentLoopIndex</span><span class="p">],</span> <span class="nx">currentDirection</span><span class="p">,</span> <span class="nx">positionX</span><span class="p">,</span> <span class="nx">positionY</span><span class="p">);</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">gameLoop</span><span class="p">);</span>
+<span class="p">}</span>
 
-      <span class="c1">// Add event listener for arrow key press</span>
-      <span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'keydown'</span><span class="p">,</span> <span class="nx">moveSquare</span><span class="p">);</span>
-      
-      <span class="c1">// Draw the initial square</span>
-      <span class="nx">drawSquare</span><span class="p">();</span>
+<span class="kd">function</span> <span class="nx">moveCharacter</span><span class="p">(</span><span class="nx">deltaX</span><span class="p">,</span> <span class="nx">deltaY</span><span class="p">,</span> <span class="nx">direction</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">positionX</span> <span class="o">+</span> <span class="nx">deltaX</span> <span class="o">&gt;</span> <span class="mf">0</span> <span class="o">&amp;&amp;</span> <span class="nx">positionX</span> <span class="o">+</span> <span class="nx">SCALED_WIDTH</span> <span class="o">+</span> <span class="nx">deltaX</span> <span class="o">&lt;</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">positionX</span> <span class="o">+=</span> <span class="nx">deltaX</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">positionY</span> <span class="o">+</span> <span class="nx">deltaY</span> <span class="o">&gt;</span> <span class="mf">0</span> <span class="o">&amp;&amp;</span> <span class="nx">positionY</span> <span class="o">+</span> <span class="nx">SCALED_HEIGHT</span> <span class="o">+</span> <span class="nx">deltaY</span> <span class="o">&lt;</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">positionY</span> <span class="o">+=</span> <span class="nx">deltaY</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">currentDirection</span> <span class="o">=</span> <span class="nx">direction</span><span class="p">;</span>
+<span class="p">}</span>
     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 
@@ -226,65 +276,114 @@ window.onload = wrap_img;
 
 
 <div class="output_html rendered_html output_subarea ">
-&lt;!DOCTYPE html&gt;
 
-  
-    <title>Canvas Example</title>
-    <style>
-      canvas {
-        border: 1px solid black;
-      }
-    </style>
-  
-  
-    <canvas id="myCanvas" width="400" height="400"></canvas>
 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sharks and minos</title>
+
+
+    <canvas width="800" height="600" id="canvas"></canvas>
     <script>
-      // Get the canvas element
-      const canvas = document.getElementById('myCanvas');
+        const SCALE = 2;
+const WIDTH = 16;
+const HEIGHT = 18;
+const SCALED_WIDTH = SCALE * WIDTH;
+const SCALED_HEIGHT = SCALE * HEIGHT;
+const CYCLE_LOOP = [0, 1, 0, 2];
+const FACING_DOWN = 0;
+const FACING_UP = 1;
+const FACING_LEFT = 2;
+const FACING_RIGHT = 3;
+const FRAME_LIMIT = 12;
+const MOVEMENT_SPEED = 2;
 
-      // Get the 2D rendering context
-      const ctx = canvas.getContext('2d');
+let canvas = document.querySelector('canvas');
+let ctx = canvas.getContext('2d');
+let keyPresses = {};
+let currentDirection = FACING_DOWN;
+let currentLoopIndex = 0;
+let frameCount = 0;
+let positionX = 0;
+let positionY = 0;
+let img = new Image();
 
-      // Set the initial position of the square
-      let x = 50;
-      let y = 50;
+window.addEventListener('keydown', keyDownListener);
+function keyDownListener(event) {
+    keyPresses[event.key] = true;
+}
 
-      // Set the fill color
-      ctx.fillStyle = 'red';
+window.addEventListener('keyup', keyUpListener);
+function keyUpListener(event) {
+    keyPresses[event.key] = false;
+}
 
-      // Draw the square at the current position
-      function drawSquare() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
-        ctx.fillRect(x, y, 50, 50); // Draw the square
+function loadImage() {
+  img.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png';
+  img.onload = function() {
+    window.requestAnimationFrame(gameLoop);
+  };
+}
+
+function drawFrame(frameX, frameY, canvasX, canvasY) {
+  ctx.drawImage(img,
+                frameX * WIDTH, frameY * HEIGHT, WIDTH, HEIGHT,
+                canvasX, canvasY, SCALED_WIDTH, SCALED_HEIGHT);
+}
+
+loadImage();
+
+function gameLoop() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  let hasMoved = false;
+
+  if (keyPresses.w) {
+    moveCharacter(0, -MOVEMENT_SPEED, FACING_UP);
+    hasMoved = true;
+  } else if (keyPresses.s) {
+    moveCharacter(0, MOVEMENT_SPEED, FACING_DOWN);
+    hasMoved = true;
+  }
+
+  if (keyPresses.a) {
+    moveCharacter(-MOVEMENT_SPEED, 0, FACING_LEFT);
+    hasMoved = true;
+  } else if (keyPresses.d) {
+    moveCharacter(MOVEMENT_SPEED, 0, FACING_RIGHT);
+    hasMoved = true;
+  }
+
+  if (hasMoved) {
+    frameCount++;
+    if (frameCount >= FRAME_LIMIT) {
+      frameCount = 0;
+      currentLoopIndex++;
+      if (currentLoopIndex >= CYCLE_LOOP.length) {
+        currentLoopIndex = 0;
       }
-
-      // Update the square's position based on arrow key press
-      function moveSquare(event) {
-        switch (event.keyCode) {
-          case 37: // Left arrow key
-            x -= 10;
-            break;
-          case 38: // Up arrow key
-            y -= 10;
-            break;
-          case 39: // Right arrow key
-            x += 10;
-            break;
-          case 40: // Down arrow key
-            y += 10;
-            break;
-        }
-        drawSquare(); // Redraw the square at the new position
-      }
-
-      // Add event listener for arrow key press
-      document.addEventListener('keydown', moveSquare);
-      
-      // Draw the initial square
-      drawSquare();
-    </script>
+    }
+  }
   
+  if (!hasMoved) {
+    currentLoopIndex = 0;
+  }
+
+  drawFrame(CYCLE_LOOP[currentLoopIndex], currentDirection, positionX, positionY);
+  window.requestAnimationFrame(gameLoop);
+}
+
+function moveCharacter(deltaX, deltaY, direction) {
+  if (positionX + deltaX > 0 && positionX + SCALED_WIDTH + deltaX < canvas.width) {
+    positionX += deltaX;
+  }
+  if (positionY + deltaY > 0 && positionY + SCALED_HEIGHT + deltaY < canvas.height) {
+    positionY += deltaY;
+  }
+  currentDirection = direction;
+}
+    </script>
 
 
 
