@@ -66,7 +66,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/csp/Exit-Ticket/">Exit Ticket</a><a class="page-link" href="/csp/Frontend/">Frontend</a><a class="page-link" href="/csp/_pages/03_college-board-proof.html">CB Assignments</a><a class="page-link" href="/csp/about/">About Me</a><a class="page-link" href="/csp/search/">Search</a><a class="page-link" href="/csp/categories/">Tags</a><a class="page-link" href="/csp/_pages/theme-changer.html">Theme Changer</a><a class="page-link" href="/csp/vocab/">Vocab</a></div>
+        <div class="trigger"><a class="page-link" href="/csp/Frontend/">Frontend</a><a class="page-link" href="/csp/_pages/03_college-board-proof.html">CB Assignments</a><a class="page-link" href="/csp/about/">About Me</a><a class="page-link" href="/csp/search/">Search</a><a class="page-link" href="/csp/categories/">Tags</a><a class="page-link" href="/csp/_pages/theme-changer.html">Theme Changer</a><a class="page-link" href="/csp/vocab/">Vocab</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -197,7 +197,8 @@ window.onload = wrap_img;
 <span class="p">}</span>
 
 <span class="kd">function</span> <span class="nx">loadImage</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'images/leprechaun.png'</span><span class="p">;</span>
+  <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://ryanrob327.github.io/csp/images/leprechaun.png'</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">img</span><span class="p">.</span><span class="nx">src</span><span class="p">)</span>
   <span class="nx">img</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nb">window</span><span class="p">.</span><span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">gameLoop</span><span class="p">);</span>
   <span class="p">};</span>
@@ -320,7 +321,8 @@ function keyUpListener(event) {
 }
 
 function loadImage() {
-  img.src = 'images/leprechaun.png';
+  img.src = 'https://ryanrob327.github.io/csp/images/leprechaun.png';
+  console.log(img.src)
   img.onload = function() {
     window.requestAnimationFrame(gameLoop);
   };
